@@ -1,0 +1,48 @@
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #A73B24;
+    color: #FFFFFF;
+    padding: 10px 20px;
+}
+
+#nav .-brand {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#nav .-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#nav .-end {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-right: 120px;
+}
+
+#nav .-end a {
+    color: #FFFFFF;
+    opacity: 0.75;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+#nav .-end a:hover {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+#nav .-menu {
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+}
+
+#nav .-logo {
+    width: 86px;
+    height: 80px;
+}
