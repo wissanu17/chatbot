@@ -24,18 +24,31 @@ body {
 
 #about-layout {
     width: 100vw;
+    overflow: hidden;
     height: 100vh;
     display: grid;
-    grid-template:
-        "n" 80px;
+    grid-template-rows: 61px 1fr;
+    grid-template-areas:
+        "n"
+        "c";
+}
+
+#about-layout .about-us-container {
+    grid-area: c;
 }
 
 #contact-layout {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template:
-        "n" 80px;
+    grid-template-rows: 61px 1fr;
+    grid-template-areas:
+        "n"
+        "c";
+}
+
+#contact-layout .contact-container {
+    grid-area: c;
 }
 
 #nav {
@@ -49,9 +62,13 @@ body {
 }
 
 #footer {
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
     grid-area: f;
-    background-color: #A73B24;
-    color: #fff;
+    background-color: #fff;
+    color: rgb(134, 134, 134);
+    display: flex;
     text-align: center;
     line-height: 24px;
     font-size: 12px;

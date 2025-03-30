@@ -1,0 +1,122 @@
+.chat-message {
+  display: flex;
+  margin-bottom: 1.25rem;
+  animation: fadeIn 0.3s ease-in-out;
+  position: relative;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message-avatar {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.user-avatar, .bot-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar {
+  background: linear-gradient(135deg, #2013d6 0%, #d37965 100%);
+}
+
+.bot-avatar {
+  background: linear-gradient(135deg, #2013d6 0%, #c57d6d 100%);
+}
+
+.message-content {
+  max-width: 70%;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: 0 2px 8px #b4b1d8;
+}
+
+.user-message .message-content {
+  background: linear-gradient(to right, #e3f2fd, #e1f5fe);
+  border: 1px solid rgba(0, 127, 255, 0.1);
+  margin-left: auto;
+  animation: slideInRight 0.3s ease-in-out;
+}
+
+.bot-message .message-content {
+  background: linear-gradient(to right, #fafafa, #f5f5f5);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  animation: slideInLeft 0.3s ease-in-out;
+}
+
+.message-text {
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.bot-message .message-text {
+  color: var(--text-dark);
+}
+
+.message-timestamp {
+  font-size: 0.7rem;
+  color: var(--text-light);
+  text-align: right;
+  margin-top: 0.5rem;
+  opacity: 0.8;
+}
+
+.user-message {
+  flex-direction: row-reverse;
+}
+
+.user-message .message-avatar {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+.user-message .message-content {
+  border-bottom-right-radius: 4px;
+}
+
+.bot-message .message-content {
+  border-bottom-left-radius: 4px;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

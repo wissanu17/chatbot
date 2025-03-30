@@ -4,6 +4,7 @@ import Nav from "../../components/Nav/Nav";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Content from "../../components/Content/Content";
 import Footer from "../../components/Footer/Footer";
+import "../styles/MainLayout.css";
 
 function MainLayout() {
     const [open, setOpen] = useState(false);
@@ -17,13 +18,23 @@ function MainLayout() {
         setOpen(false);
     }, [location.pathname]);
 
+    // return (
+    //     <section id="main-layout">
+    //         <Nav click={handleClick} />
+    //         <Sidebar open={open} setOpen={setOpen} />
+    //         <Content />
+    //         <Footer />
+    //     </section>
+    // );
     return (
-        <section id="main-layout">
+        <div className="main-layout">
             <Nav click={handleClick} />
-            <Sidebar open={open} setOpen={setOpen} />
-            <Content />
+            <div className="main-content">
+                <Sidebar open={open} setOpen={setOpen} />
+                <Content/>
+            </div>
             <Footer />
-        </section>
+        </div>
     );
 }
 

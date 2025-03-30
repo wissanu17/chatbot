@@ -10,7 +10,8 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<MainLayout />} />
-                <Route path="/features" element={<FeatureLayout />} /> {/* <Route path="/features" element={<Navigate to="/" />} />*/}
+                <Route path="/features" element={<FeatureLayout />} /> 
+                {/* <Route path="/features" element={<Navigate to="/" />} />*/}
                 <Route path="/about" element={<AboutLayout />} />
                 <Route path="/contact" element={<ContactLayout />} />
             </Routes>
